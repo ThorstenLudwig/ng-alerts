@@ -1,4 +1,4 @@
-/*! ng-alerts 1.0.6 2016-09-30 */
+/*! ng-alerts 1.0.6 2016-11-09 */
 'use strict';
 
 angular.module('ngAlerts', ['ui.bootstrap'])
@@ -546,9 +546,9 @@ angular.module('ngAlerts').run(['$templateCache', function($templateCache) {
 
   $templateCache.put('template/ng-alerts/queue.html',
     "<div id=\"ng-alerts-queue\" class=\"{{location}}\">\n" +
-    "    <uib-alert ng-repeat=\"alert in alerts\" type=\"{{alert.type}}\" close=\"remove(alert.id)\">\n" +
+    "    <div uib-alert class=\"alert alert-{{alert.type}} ng-scope ng-binding \" ng-repeat=\"alert in alerts\" type=\"{{alert.type}}\" close=\"remove(alert.id)\">\n" +
     "        {{alert.msg}}\n" +
-    "    </uib-alert>\n" +
+    "    </div>\n" +
     "</div>\n"
   );
 
